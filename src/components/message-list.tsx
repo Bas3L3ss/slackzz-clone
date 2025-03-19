@@ -15,7 +15,6 @@ import { useCurrentMember } from "@/features/members/api/use-current-member";
 import { Loader } from "lucide-react";
 import ConversationHero from "./conversation-hero";
 import { useLocation } from "react-use";
-// import { cn } from "@/lib/utils";
 
 interface MessageListProps {
   channelName?: string;
@@ -29,7 +28,7 @@ interface MessageListProps {
   variant?: "channel" | "thread" | "conversation";
 }
 
-const TIME_THRESHOLD = 5; // 5 mins
+const TIME_THRESHOLD = 10;
 
 const MessageList: React.FC<MessageListProps> = ({
   canLoadMore,
@@ -49,7 +48,6 @@ const MessageList: React.FC<MessageListProps> = ({
   const location = useLocation();
   const { data: currentMember } = useCurrentMember({ workspaceId });
 
-  // Memoized message grouping
   const groupedMessages = useMemo(() => {
     return data?.reduce(
       (groups, message) => {
@@ -164,7 +162,6 @@ const MessageList: React.FC<MessageListProps> = ({
     return () => clearInterval(scrollInterval);
   };
 
-  // Intersection Observer setup
   const observerCallback = useCallback(
     (el: HTMLDivElement | null) => {
       if (!el) return;
@@ -189,7 +186,6 @@ const MessageList: React.FC<MessageListProps> = ({
       ref={listRef}
       className="flex-1 flex flex-col-reverse pb-4 overflow-y-auto message-scrollbar relative"
     >
-      {/* Scrolling indicator */}
       {isScrolling && (
         <div className="fixed bottom-4 right-4 bg-background/80 backdrop-blur-sm p-2 rounded-lg shadow-lg z-50 flex items-center gap-2">
           <Loader className="size-4 animate-spin" />
@@ -197,7 +193,6 @@ const MessageList: React.FC<MessageListProps> = ({
         </div>
       )}
 
-      {/* Message groups */}
       {Object.entries(groupedMessages || {}).map(([dateKey, messages]) => (
         <div key={dateKey}>
           <div className="text-center my-2 relative">
@@ -246,10 +241,8 @@ const MessageList: React.FC<MessageListProps> = ({
         </div>
       ))}
 
-      {/* Infinite scroll trigger */}
       <div className="h-1" ref={observerCallback} />
 
-      {/* Loading indicator */}
       {isLoadingMore && (
         <div className="text-center my-2 relative">
           <hr className="absolute top-1/2 left-0 right-0 border-t border-gray-300" />
@@ -259,7 +252,6 @@ const MessageList: React.FC<MessageListProps> = ({
         </div>
       )}
 
-      {/* Channel or Conversation hero */}
       {variant === "channel" && channelName && channelCreationTime && (
         <ChannelHero name={channelName} creationTime={channelCreationTime} />
       )}

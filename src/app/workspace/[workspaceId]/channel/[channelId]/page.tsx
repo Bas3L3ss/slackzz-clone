@@ -4,7 +4,7 @@ import { UseGetChannel } from "@/features/channels/api/use-get-channel";
 import { useChannelId } from "@/hooks/use-channel-id";
 import { Loader, TriangleAlert } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import Header from "./_components/header";
+import Header from "@/app/workspace/[workspaceId]/channel/[channelId]/_components/header";
 import { useGetMessages } from "@/features/messages/api/use-get-message";
 import MessageList from "@/components/message-list";
 import { useSearchParams } from "next/navigation";
@@ -16,9 +16,15 @@ import dynamic from "next/dynamic";
 const VideoChat = dynamic(() => import("@/components/phone-call"), {
   ssr: false,
 });
-const ChatInput = dynamic(() => import("./_components/chat-input"), {
-  ssr: false,
-});
+const ChatInput = dynamic(
+  () =>
+    import(
+      "@/app/workspace/[workspaceId]/channel/[channelId]/_components/chat-input"
+    ),
+  {
+    ssr: false,
+  }
+);
 
 const ChannelIdPage = () => {
   const workspaceId = useWorkSpaceId();

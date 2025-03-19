@@ -2,9 +2,6 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import LinkPreview from "@/components/link-previewer";
 
-global.fetch = jest.fn();
-global.window.open = jest.fn();
-
 // @ts-expect-error: no prob
 global.URL = jest.fn().mockImplementation((url) => {
   let hostname = "";

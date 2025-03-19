@@ -31,6 +31,7 @@ const Renderer = ({ value, links, messageId = undefined }: RendererProps) => {
 
     try {
       const jsonValue = JSON.parse(value);
+
       const container = rendererRef.current;
 
       quill.setContents(jsonValue);
@@ -38,11 +39,11 @@ const Renderer = ({ value, links, messageId = undefined }: RendererProps) => {
         .getText()
         .replace(/<(.|\n)*?>/g, "")
         .trim();
+
       setIsEmpty(cleanText.length === 0);
 
       container.innerHTML = quill.root.innerHTML;
 
-      // Cleanup function
       return () => {
         container.innerHTML = "";
       };
@@ -59,9 +60,10 @@ const Renderer = ({ value, links, messageId = undefined }: RendererProps) => {
       <div ref={rendererRef} className="ql-editor ql-renderer" id={messageId} />
       {links?.length > 0 && !params.has("parentMessageId") && (
         <article className="my-4 flex flex-col gap-2">
-          {links.map((link, index) => (
-            <LinkPreview url={link} key={`${link}-${index}`} />
-          ))}
+          {links &&
+            links.map((link, index) => (
+              <LinkPreview url={link} key={`${link}-${index}`} />
+            ))}
         </article>
       )}
     </>

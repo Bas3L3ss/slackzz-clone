@@ -162,6 +162,7 @@ export default function LinkPreview({
         className={`overflow-hidden border-l-4 border-l-primary/20 ${className}`}
       >
         <CardContent className="p-0">
+          <span className="sr-only">loading</span>
           <div className="flex flex-col md:flex-row">
             <div className="p-3 flex-1 min-w-0 space-y-2">
               <div className="flex items-center gap-2">
@@ -277,7 +278,6 @@ export default function LinkPreview({
                 </>
               ) : (
                 <img
-                  //   src={previewData.image}
                   src={
                     previewData.image
                       ? `/api/image-proxy?url=${encodeURIComponent(previewData.image)}&w=500`

@@ -25,7 +25,7 @@ function WorkspaceIdLayout({ children }: WorkspaceIdLayoutProps) {
   const showPanel = !!parentMessageId || !!profileMemberId;
 
   return (
-    <>
+    <PresenceProvider>
       <div className="h-full ">
         <Toolbar />
 
@@ -76,7 +76,7 @@ function WorkspaceIdLayout({ children }: WorkspaceIdLayoutProps) {
           </ResizablePanelGroup>
         </div>
       </div>
-    </>
+    </PresenceProvider>
   );
 }
 

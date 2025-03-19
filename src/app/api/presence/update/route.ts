@@ -7,6 +7,7 @@ const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 export async function POST(request: Request) {
   try {
     const { userId, status } = await request.json();
+    console.log(userId, status);
 
     if (!userId || !status) {
       return NextResponse.json(

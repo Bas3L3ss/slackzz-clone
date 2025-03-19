@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useEffect, useRef } from "react";
+import { createContext, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useConvexAuth } from "convex/react";
 import { useCurrentUser } from "@/features/auth/api/use-current-user";
@@ -10,14 +10,6 @@ const SOCKET_URL = "http://localhost:3001";
 type PresenceContextType = undefined;
 
 const PresenceContext = createContext<PresenceContextType | null>(null);
-
-export const usePresence = () => {
-  const context = useContext(PresenceContext);
-  if (!context) {
-    throw new Error("usePresence must be used within a PresenceProvider");
-  }
-  return context;
-};
 
 export const PresenceProvider = ({
   children,

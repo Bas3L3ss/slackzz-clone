@@ -4,8 +4,8 @@
 
 <hr>
 
-<a href="[Your Repository URL]">
-<img src="[Your Logo URL]" width="90" alt="Slackzz Logo" />
+<a href="https://github.com/Bas3L3ss/slackzz-clone">
+<img src="assets/favicon.ico" width="90" alt="Slackzz Logo" />
 </a>
 
 <h2>Slackzz <span style="color: gray; font-size: 10px;">(clone)</span> - Real-time Communication Platform</h2>
@@ -16,15 +16,39 @@
 ![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![](https://img.shields.io/badge/Socketio-black?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8Y2lyY2xlIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjExNCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTk3LjYzNyAxMjEuNjljMjcuMzI3LTIyLjMyNiA1NC4wNTgtNDUuNDI2IDgxLjk4LTY3LjA5Ny0xNC42NDYgMjIuNTA1LTI5LjcwOCA0NC43MTEtNDQuMzU0IDY3LjIxNS0xMi41NjIuMDYtMjUuMTIzLjA2LTM3LjYyNi0uMTE5ek0xMjAuNzM3IDEzNC4xMzJjMTIuNjIxIDAgMjUuMTgzIDAgMzcuNzQ1LjE3OS0yNy41MDUgMjIuMjA2LTU0LjExNyA0NS40ODQtODIuMDk5IDY3LjA5NiAxNC42NDYtMjIuNTA1IDI5LjcwOC00NC43NyA0NC4zNTQtNjcuMjc1eiIgZmlsbD0iI0ZGRiIvPgo8L3N2Zz4=)
 ![](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![](https://img.shields.io/badge/Radix_UI-6200EE?style=for-the-badge&logo=radix-ui&logoColor=white)
-
-<img src="[Your Screenshot URL]" width="80%">
+![](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
 </div>
 
 ## 💡 Overview
 
-Slackzz is a modern real-time communication platform built with Next.js and Convex, designed to facilitate team collaboration and messaging. It provides a robust set of features for workspace management, channel-based communication, and direct messaging.
+**Slackzz** is a modern **real-time communication** platform built with **Next.js and Convex**, designed to facilitate team collaboration and messaging. It provides a **robust set of features** for workspace management, channel-based communication, and direct messaging.
+
+Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
+
+## 🎬 Demo
+
+**🔐 Seamless User Authentication**
+
+- **Register and login users effortlessly with OAuth**
+
+  ![login](assets/user-login.gif)
+  ![register](assets/user-register-ezgif.com-video-to-gif-converter.gif)
+
+**📨 Realtime User Experience**
+
+- **Realtime features**
+
+  ![chatting](assets/chatting-ezgif.com-video-to-gif-converter.gif)
+  ![calling-and-more](assets/calling-ezgif.com-video-to-gif-converter.gif)
+
+- **Pro subscription**
+
+  ![upgrade-user](assets/user-subscription-ezgif.com-video-to-gif-converter.gif)
+
+- **And alot more!**
+
+  ![more](assets/more-ezgif.com-video-to-gif-converter.gif)
 
 ## ✨ Features
 
@@ -64,7 +88,7 @@ Slackzz is a modern real-time communication platform built with Next.js and Conv
 1. **Clone the repository:**
 
    ```bash
-   git clone [your-repository-url]
+   git clone https://github.com/Bas3L3ss/slackzz-clone
    cd slackzz-clone
    ```
 
@@ -115,7 +139,3 @@ Visit `http://localhost:3000` to access the application. You can:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

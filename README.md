@@ -41,6 +41,7 @@ Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
 
   ![chatting](assets/chatting-ezgif.com-video-to-gif-converter.gif)
   ![calling-and-more](assets/calling-ezgif.com-video-to-gif-converter.gif)
+  ![connectivity](assets/user-connectivity-ezgif.com-video-to-gif-converter.gif)
 
 - **Pro subscription**
 
@@ -71,6 +72,7 @@ Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
 - **Stripe:** For payment processing
 - **Auth.js:** For authentication
 - **Socket.io**: For real-time connection
+- **Redis**: For key-value store
 - **LiveKit:** For real-time call features
 - **Tailwind CSS:** For responsive styling
 

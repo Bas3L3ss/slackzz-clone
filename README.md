@@ -24,7 +24,7 @@
 
 **Slackzz** is a modern **real-time communication** platform built with **Next.js and Convex**, designed to facilitate team collaboration and messaging. It provides a **robust set of features** for workspace management, channel-based communication, and direct messaging.
 
-Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
+Websocket server (not deployed yet): https://github.com/Bas3L3ss/slackzz-websocket-server
 
 ## 🎬 Demo
 

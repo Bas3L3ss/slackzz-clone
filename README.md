@@ -92,7 +92,7 @@ Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
 - **Optimized for instant messaging** and **real-time interactions** via Convex DB and WebSocket
 - Powered by **complex data model** and **Convex backend** for a seamless user experience
 - End-to-end encryption for private conversations
-- Well-managed user authenticated sessions
+- Well-managed user authenticated sessions with OAuth 2.0
 - Stripe webhook method of tracking pro-user subscriptions
 - Ensure application robustness with unit and integrated testing
 

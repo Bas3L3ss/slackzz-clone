@@ -94,6 +94,7 @@ Websocket server: https://github.com/Bas3L3ss/slackzz-websocket-server
 - End-to-end encryption for private conversations
 - Well-managed user authenticated sessions
 - Stripe webhook method of tracking pro-user subscriptions
+- Ensure application robustness with unit and integrated testing
 
 ## 📦 Getting Started
 
